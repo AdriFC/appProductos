@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación productos</title>
+    <!--Usado pluging live server para no actualizar navegador con cada cambio-->
+    <!--Link a cdn de Bootstrap alterado (bootswatch)-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+</head>
+<body>
+
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/">
+            Product App
+        </a>
+    </nav>
+
+    <!--APLICACIÓN-->       
+    <div class="container">                                         <!--bootstrap contenedor centrar app-->
+        <div id="App" class="row pt-5">                             <!--bootstrap fila y padding top-->
+            <div class="col-md-4">                                  <!--Formulario bootstrap 4 columnas-->
+                
+                <div class="card">                                  <!--Card Bootswatch-->
+                    <div class="card-header">
+                        <h1>Agrega un producto</h1>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="nombre del producto"
+                            class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="price" placeholder="precio del producto"
+                            step="0.01" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="year" placeholder="año del producto"
+                            min="1900" value="2020" class="form-control">
+                        </div>
+                        <input type="submit" value="save" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div id="product-list" class="col-md-8">                                  <!--Listado productos bootstrap 8 columnas-->
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--LINK JS-->
+    <script src="App.js"></script>
+</body>
+</html>
